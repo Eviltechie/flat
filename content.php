@@ -9,9 +9,6 @@
 		<?php endif; ?>
 	</header>
 	<?php $archive_featured_image = flat_get_theme_option( 'archive_featured_image' ) ?>
-	<?php if ( has_post_thumbnail() && ! post_password_required() && empty( $archive_featured_image ) ) : ?>
-		<div class="entry-thumbnail"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a></div>
-	<?php endif; ?>
 	<?php $archive_content = flat_get_theme_option( 'archive_content' ); ?>
 	<?php if ( empty ( $archive_content ) ) : ?>
 		<div class="entry-content">
