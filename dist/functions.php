@@ -138,13 +138,6 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 			get_the_author()
 		);
 
-		if ( true === $show_sep ) {
-			echo '<span class="sep">&middot;</span>';
-		}
-
-		echo '<span class="comments-link">';
-		comments_popup_link( __( '0 Comments', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) );
-		echo '</span>';
 	}
 endif;
 
