@@ -49,9 +49,6 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 			echo '<span class="sep">&middot;</span>';
 		}
 
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( '0 Comments', 'flat' ), esc_html__( '1 Comment', 'flat' ), esc_html__( '% Comments', 'flat' ) );
-		echo '</span>';
 	}
 endif;
 
