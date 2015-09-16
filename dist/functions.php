@@ -104,11 +104,6 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 		# Get the current version of Flat, even if a child theme is being used
 		$version = wp_get_theme( wp_get_theme()->template )->get( 'Version' );
 
-		# When needed, enqueue comment-reply script
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-
 		# Minified versions of CSS & JS are used, unless a development constant is set
 		if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 			$assets = array(

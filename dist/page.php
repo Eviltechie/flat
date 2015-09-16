@@ -22,7 +22,7 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php if ( ! is_front_page() ) { the_title(); } ?></h1>
 					</header>
 					<?php flat_hook_entry_before(); ?>
 					<div class="entry-content" itemprop="articleBody">

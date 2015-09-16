@@ -24,9 +24,6 @@ if ( 1 == count( get_included_files() ) ) {
 		<?php endif; ?>
 	</header>
 	<?php $archive_featured_image = flat_get_theme_option( 'archive_featured_image', 1 ); ?>
-	<?php if ( has_post_thumbnail() && ! post_password_required() && 1 != $archive_featured_image ) : ?>
-		<div class="entry-thumbnail"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'post-thumbnail', array( 'itemprop' => 'thumbnailUrl' ) ); ?></a></div>
-	<?php endif; ?>
 	<?php $archive_content = flat_get_theme_option( 'archive_content', 1 ); ?>
 		<?php flat_hook_entry_before(); ?>
 	<?php if ( 1 != $archive_content ) : ?>
